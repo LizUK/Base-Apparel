@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+</head>
+<body>
+
+	<div id="wrapper">
+
+        <main>
+        
+            <header>
+                <img src="images/logo.svg" alt="Base Apparel Coming Soon" />
+            </header>
+        
+            <div id="hero-mobile"><img src="images/hero-mobile.jpg" alt="Base Apparel Coming Soon" /></div>
+        
+             <div id="content">
+             
+                 <h1>We're <span class="strong">coming soon</span></h1>
+        
+                 <p>Hello fellow shoppers! We're currently building our new fashion store. 
+                 Add your email below to stay up-to-date with announcements and our launch deals.</p>
+                
+                 <form id="myForm" name="myForm" action="/" method="post">
+                 
+                 	<input type="text" id="email" name="email" placeholder="Email Address" /><p id="resultimg"></p>
+                    <input type="submit" name="submit" value="" /> 
+                    <p id="message"></p>                    
+                 
+                 </form>
+                 
+                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                 <script>
+				 
+				 	$("#myForm").on('submit', function(e){
+
+					  e.preventDefault();
+												
+						if ( $("#email").val().length === 0 ) {
+								$("#message").html("Please fill in your email address.");
+								$("#resultimg").addClass("error");
+								$("#email").addClass("error");
+								$("#message").addClass("error");
+						} 
+						
+						else if ( !validEmail( $("#email").val() ) ) {
+								$("#message").html("Please provide a valid email address.");
+								$("#resultimg").addClass("error");
+								$("#email").addClass("error");
+								$("#message").addClass("error");
+						} 
+						
+						else {
+								$("#message").html("Thank you for submitting your email address.");
+								$("#resultimg").addClass("success");
+								$("#email").addClass("success");
+								$("#message").addClass("success");
+						}
+					})
+				  
+					
+					function validEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+				 </script>
+
+                 
+             </div>
+             
+             <div id="hero-desktop"><img src="images/hero-desktop.jpg" alt="Base Apparel Coming Soon" /></div>
+        
+        </main>
+      
+        <footer>
+            <p class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                Coded by <a href="https://www.linkedin.com/in/elizabeth-phillips-a3831961/">Elizabeth Phillips</a>.
+            </p>
+        </footer>
+      
+	</div>  
+</body>
+</html>

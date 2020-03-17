@@ -1,0 +1,364 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*** General ***/
+
+body {
+}
+
+h1 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	font-size: 60px;
+	text-transform: uppercase;
+	color: hsl(0, 36%, 70%);
+	margin: 20px 0;
+	letter-spacing: 15px;
+}
+
+p {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: hsl(0, 36%, 70%);
+	line-height: 1.5;
+}
+
+.strong {
+	font-weight: 600;
+	color: hsl(0, 6%, 24%);
+}
+
+form {
+	position: relative;
+}
+
+input[type=text] {
+	border: solid 1px hsl(0, 36%, 70%);
+    border-radius: 25px;
+    padding: 17px 20px;
+    width: 85%;
+    margin: 30px auto;
+    background: transparent;
+	color: hsl(0, 6%, 24%);
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+}
+
+input[type=text]::placeholder { 
+	color: hsl(0, 36%, 70%);
+	opacity: 1;
+	font-weight: 400; 
+}
+
+input[type=text]:-ms-input-placeholder { 
+  	color: hsl(0, 36%, 70%);
+	font-weight: 400;
+}
+
+input[type=text]::-ms-input-placeholder { 
+  	color: hsl(0, 36%, 70%);
+	font-weight: 400;
+}
+
+input[type=submit] {
+	border: none;
+    width: 100px;
+    border-radius: 25px;
+    padding: 17px;
+    margin: 30px auto;
+    background-color: hsla(0, 74%, 74%, 0.8);
+    background-image: url(images/icon-arrow.svg), linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0%;
+    box-shadow: 0 4px 18px 0 hsla(0, 6%, 24%, 0.1), 0 6px 20px 0 hsla(0, 74%, 74%, 0.4);
+}
+
+input:hover[type=submit] {
+	cursor: pointer;
+	background-image: url(images/icon-arrow.svg), linear-gradient(135deg, hsl(0, 100%, 90%), hsl(0, 100%, 90%));
+	box-shadow: 0 10px 14px 0 hsla(0, 3%, 17%, 0.2), 0 6px 20px 0 hsla(0, 74%, 74%, 0.4);
+}
+
+#resultimg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 30%;
+    right: 25%;
+}
+
+#resultimg.error {
+    background-image: url(images/invalid.png);
+    background-repeat: no-repeat;}
+	
+#email.error {
+	border-color: #ff0000;
+}
+
+#email.success {
+	border-color: #00cc00;
+}
+
+#message.error {
+	color: #ff0000;
+}
+
+#message.success {
+	color: #00cc00;
+}
+
+#resultimg.success {
+    background-image: url(images/valid.png);
+    background-repeat: no-repeat;
+}
+
+.attribution { 
+	font-size: 11px; 
+	text-align: center; 
+}
+
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
+}
+
+.attribution a:visited { 
+	color: hsl(0, 6%, 24%); 
+}
+
+@media only screen and (min-width: 1201px) {
+	
+	#hero-mobile {
+		display: none;
+	}
+	
+	#wrapper {
+		width: 1400px;
+		margin: 0 auto;
+		background-color: hsl(0, 100%, 98%); 
+		background-image: url(bg-pattern-desktop.svg); 
+	}
+		
+	header {
+		display: table-row;
+		width: 630px;
+		height: 50px;
+	}
+	
+	header img {
+		padding: 60px 0 0 160px;
+	}
+	
+	main {
+		display: table;
+		width: 100%;
+	}
+	
+	#content {
+		width: 460px;
+		display: table-cell;
+		vertical-align: top;
+		height: 568px;
+		padding: 120px 160px 0 160px;
+	}
+	
+	#hero-desktop {
+		width: 600px;
+		display: table-cell;
+		position: absolute;
+   		top: 0;
+	
+	}
+	
+	footer {
+		display: inline-block;
+		width: 460px;
+		text-align: center;
+		padding-left: 160px;
+	}
+	
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+	
+	body {
+		background-image: url(images/bg-pattern-desktop.svg);
+	}
+	
+	#hero-mobile {
+		display: none;
+	}
+	
+	#wrapper {
+		width: 768px;
+    	margin: 0 auto;  
+	}
+		
+	header {
+		display: table-row;
+		width: 630px;
+		height: 50px;
+	}
+	
+	header img {
+		padding: 40px 0 0 50px;
+	}
+	
+	main {
+		display: table;
+		width: 100%;
+	}
+	
+	#content {
+		width: 50%;
+		min-width: 325px;
+		display: table-cell;
+		vertical-align: top;
+		height: 400px;
+		padding: 60px 50px 0 50px;
+	}
+	
+	h1 {
+		font-size: 40px;
+	}
+	
+	input[type=text] {
+	    margin: 30px auto 0;
+	}
+	
+	input[type=submit] {
+		width: 80px;
+		padding: 17px;
+		margin: 0 auto;
+		position: absolute;
+		right: -1%;
+		top: 30px;
+	}
+	
+	#resultimg {
+		top: 40%;
+	}
+	
+	#message.error {
+		margin-top: 20px;
+	}
+	
+	#hero-desktop {
+		width: 50%;
+		max-width: 425px;
+		min-width: 425px;
+		display: table-cell;
+		position: absolute;
+   		top: 0;
+	}
+	
+	#hero-desktop img {
+		max-width: 100%;
+	}
+	
+	footer {
+		display: inline-block;
+		width: 400px;
+		text-align: center;
+	}
+	
+}
+
+	
+@media only screen and (max-width: 600px) {
+
+	#wrapper {
+		width: 375px;
+		margin: 0 auto;
+		background-color: hsl(0, 100%, 98%); 
+  		background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)); 
+	}
+	
+	h1 {
+		font-size: 40px;
+	}
+	
+	p {
+		font-size: 14px;
+	}
+	
+	header {
+		height: 20px;
+		padding: 30px 30px 35px 30px;
+		text-align: left;
+	}
+	
+	header img {
+		max-height: 22px;
+	}
+	
+	main {
+		text-align: center;
+	}
+	
+	#content {
+		padding: 50px 40px;
+	}
+	
+	input[type=submit] {
+		width: 65px;
+	}
+
+	#resultimg.error,
+	#resultimg.success {
+        background-position: 75% 10%;
+	}
+	
+	#hero-desktop {
+		display: none;
+	}
+	
+}
