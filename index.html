@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="styles.css">
@@ -32,8 +32,8 @@
                 
                  <form id="myForm" name="myForm" action="/" method="post">
                  
-                 	<input type="text" id="email" name="email" placeholder="Email Address" /><p id="resultimg"></p>
-                    <input type="submit" name="submit" value="" /> 
+                 	<input type="email" id="email" name="email" placeholder="Email Address" /><p id="resultimg"></p>
+                    <button type="submit" name="submit" value="" /> </button>
                     <p id="message"></p>                    
                  
                  </form>
@@ -46,7 +46,7 @@
 					  e.preventDefault();
 												
 						if ( $("#email").val().length === 0 ) {
-								$("#message").html("Please fill in your email address.");
+								$("#message").html("Please provide a valid email address!");
 								$("#resultimg").addClass("error");
 								$("#email").addClass("error");
 								$("#message").addClass("error");
