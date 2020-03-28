@@ -107,6 +107,18 @@ input[type=email]::-ms-input-placeholder {
 	font-weight: 400;
 }
 
+.hide-element {
+    border: 0;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip; rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 button {
 	border: none;
     width: 100px;
@@ -121,6 +133,7 @@ button {
     position: absolute;
     right: 0%;
     box-shadow: 0 4px 18px 0 hsla(0, 6%, 24%, 0.1), 0 6px 20px 0 hsla(0, 74%, 74%, 0.4);
+    text-indent: -5000px;
 }
 
 button:hover {
