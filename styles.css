@@ -110,6 +110,7 @@ input[type=email]::-ms-input-placeholder {
 button {
 	border: none;
     width: 100px;
+    height: 50px;
     border-radius: 25px;
     padding: 17px;
     margin: 30px auto;
@@ -122,7 +123,7 @@ button {
     box-shadow: 0 4px 18px 0 hsla(0, 6%, 24%, 0.1), 0 6px 20px 0 hsla(0, 74%, 74%, 0.4);
 }
 
-button {
+button:hover {
 	cursor: pointer;
 	background-image: url(images/icon-arrow.svg), linear-gradient(135deg, hsl(0, 100%, 90%), hsl(0, 100%, 90%));
 	box-shadow: 0 10px 14px 0 hsla(0, 3%, 17%, 0.2), 0 6px 20px 0 hsla(0, 74%, 74%, 0.4);
@@ -275,11 +276,11 @@ button {
 	}
 	
 	input[type=email] {
-		width: 80px;
+		width: 95%;
 		padding: 17px;
 		margin: 0 auto;
 		position: absolute;
-		right: -1%;
+		right: 0;
 		top: 30px;
 	}
 	
