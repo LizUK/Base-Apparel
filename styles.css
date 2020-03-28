@@ -79,7 +79,7 @@ form {
 	position: relative;
 }
 
-input[type=text] {
+input[type=email] {
 	border: solid 1px hsl(0, 36%, 70%);
     border-radius: 25px;
     padding: 17px 20px;
@@ -91,23 +91,23 @@ input[type=text] {
 	font-weight: 600;
 }
 
-input[type=text]::placeholder { 
+input[type=email]::placeholder { 
 	color: hsl(0, 36%, 70%);
 	opacity: 1;
 	font-weight: 400; 
 }
 
-input[type=text]:-ms-input-placeholder { 
+input[type=email]:-ms-input-placeholder { 
   	color: hsl(0, 36%, 70%);
 	font-weight: 400;
 }
 
-input[type=text]::-ms-input-placeholder { 
+input[type=email]::-ms-input-placeholder { 
   	color: hsl(0, 36%, 70%);
 	font-weight: 400;
 }
 
-input[type=submit] {
+button {
 	border: none;
     width: 100px;
     border-radius: 25px;
@@ -122,7 +122,7 @@ input[type=submit] {
     box-shadow: 0 4px 18px 0 hsla(0, 6%, 24%, 0.1), 0 6px 20px 0 hsla(0, 74%, 74%, 0.4);
 }
 
-input:hover[type=submit] {
+button {
 	cursor: pointer;
 	background-image: url(images/icon-arrow.svg), linear-gradient(135deg, hsl(0, 100%, 90%), hsl(0, 100%, 90%));
 	box-shadow: 0 10px 14px 0 hsla(0, 3%, 17%, 0.2), 0 6px 20px 0 hsla(0, 74%, 74%, 0.4);
@@ -270,11 +270,11 @@ input:hover[type=submit] {
 		font-size: 40px;
 	}
 	
-	input[type=text] {
+	input[type=email] {
 	    margin: 30px auto 0;
 	}
 	
-	input[type=submit] {
+	input[type=email] {
 		width: 80px;
 		padding: 17px;
 		margin: 0 auto;
@@ -348,7 +348,7 @@ input:hover[type=submit] {
 		padding: 50px 40px;
 	}
 	
-	input[type=submit] {
+	button {
 		width: 65px;
 	}
 
